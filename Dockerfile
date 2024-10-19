@@ -5,7 +5,7 @@ FROM public.ecr.aws/lambda/python:3.12
 COPY requirements.txt ./hello_world
 
 # Install the specified packages
-# RUN python -m pip install --upgrade pip setuptools
+RUN python -m pip install --upgrade pip setuptools
 RUN pip install -r hello_world/requirements.txt
 
 # Copy function code
