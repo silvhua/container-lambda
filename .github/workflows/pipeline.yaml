@@ -116,6 +116,7 @@ jobs:
           python -m pip install --upgrade pip setuptools
       - name: Build resources
         run: |
+          pip cache purge
           sam build --use-container
 
       - name: Assume the testing pipeline user role
