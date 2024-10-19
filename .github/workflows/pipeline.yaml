@@ -114,6 +114,7 @@ jobs:
       - name: Upgrade pip and setuptools
         run: |
           python -m pip install --upgrade pip setuptools
+          pip install numexpr
       - name: Build resources
         run: sam build --template ${SAM_TEMPLATE} --use-container
 
