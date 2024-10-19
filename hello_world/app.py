@@ -33,8 +33,6 @@ def lambda_handler(event, context):
     #     print(e)
 
     #     raise e
-    documentai_client = documentai.DocumentProcessorServiceClient()
-    print(documentai_client)
 
     return {
         "statusCode": 200,
