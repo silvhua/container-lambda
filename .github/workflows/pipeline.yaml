@@ -80,7 +80,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip setuptools
           pip install numexpr
-      - run: sam build --template ${SAM_TEMPLATE} --use-container
+      - run: sam build --use-container
 
       - name: Assume the testing pipeline user role
         uses: aws-actions/configure-aws-credentials@v4
@@ -117,7 +117,7 @@ jobs:
       - name: Build resources
         run: |
           pip install numexpr
-          sam build --template ${SAM_TEMPLATE} --use-container
+          sam build --use-container
 
       - name: Assume the testing pipeline user role
         uses: aws-actions/configure-aws-credentials@v4
