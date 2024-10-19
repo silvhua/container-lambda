@@ -5,7 +5,7 @@ codeuri = "/Users/silvh/Library/CloudStorage/OneDrive-Personal/datajam/container
 runtime = "python3.12"
 architecture = "x86_64"
 handler = "app.lambda_handler"
-manifest_hash = "ebe678cee2e75f6e032529e87dde8d82"
+manifest_hash = "536a15535d47f2275bc46665e6c3f554"
 packagetype = "Zip"
 functions = ["HelloWorldFunction"]
 
