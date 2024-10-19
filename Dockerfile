@@ -6,6 +6,7 @@ COPY requirements.txt ./hello_world
 
 # Install the specified packages
 RUN pip install -r hello_world/requirements.txt
+RUN python -m pip install --upgrade pip setuptools
 
 # Copy function code
 COPY app.py ./hello_world
