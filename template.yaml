@@ -9,7 +9,7 @@ Description: >
 Globals:
   Function:
     Timeout: 300
-    MemorySize: 128
+    MemorySize: 10240
 
 Resources:
   HelloWorldFunction:
