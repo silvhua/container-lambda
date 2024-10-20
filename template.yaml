@@ -17,6 +17,9 @@ Resources:
     Properties:
       ImageUri: 741448954840.dkr.ecr.us-west-2.amazonaws.com/docker-lambda-documentai:latest
       PackageType: Image
+      ImageConfig:
+        Command: # https://docs.aws.amazon.com/AWSCloudFormation/latest/UserGuide/aws-properties-lambda-function-imageconfig.html
+          - app.lambda_function.handler
       # CodeUri: helloWorld/
       # Handler: app.lambda_handler
       Runtime: python3.10
