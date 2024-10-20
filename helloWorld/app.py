@@ -1,5 +1,4 @@
 import json
-from google.cloud import documentai_v1 as documentai
 
 # import requests
 
