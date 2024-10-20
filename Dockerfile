@@ -6,6 +6,8 @@ FROM public.ecr.aws/lambda/python:3.10
 COPY ./helloWorld/requirements.txt ${LAMBDA_TASK_ROOT}
 
 # Install the specified packages
+# `yum install gcc -y` is to avoid issue with building `bottleneck` wheel when running Docker image locally
+RUN yum install gcc -y
 RUN python -m pip install --upgrade pip setuptools
 RUN pip install -r requirements.txt --target ${LAMBDA_TASK_ROOT}
 
