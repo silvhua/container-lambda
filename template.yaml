@@ -15,8 +15,8 @@ Resources:
   HelloWorldFunction: # https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-function.html
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      # ImageUri: 741448954840.dkr.ecr.us-west-2.amazonaws.com/docker-lambda-documentai:latest
-      # PackageType: Image
+      ImageUri: 741448954840.dkr.ecr.us-west-2.amazonaws.com/docker-lambda-documentai:latest
+      PackageType: Image
       # CodeUri: helloWorld/
       # Handler: app.lambda_handler
       # Runtime: python3.10
