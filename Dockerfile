@@ -1,5 +1,6 @@
 # https://docs.aws.amazon.com/lambda/latest/dg/python-image.html#python-image-base
-FROM public.ecr.aws/lambda/python:3.10
+# Python 3.12 did not work
+FROM public.ecr.aws/lambda/python:3.10  
 
 # Copy requirements.txt
 COPY ./helloWorld/requirements.txt ${LAMBDA_TASK_ROOT}
