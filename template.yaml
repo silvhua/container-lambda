@@ -29,6 +29,7 @@ Resources:
   PipelineExecutionRole:
     Type: AWS::IAM::Role
     Properties:
+      RoleName: aws-sam-cli-managed-dev-pipel-PipelineExecutionRole-LOvrqWqhhcZc
       AssumeRolePolicyDocument:
         Version: '2012-10-17'
         Statement:
