@@ -15,8 +15,8 @@ Resources:
   HelloWorldFunction: # https://docs.aws.amazon.com/serverless-application-model/latest/developerguide/sam-resource-function.html
     Type: AWS::Serverless::Function # More info about Function Resource: https://github.com/awslabs/serverless-application-model/blob/master/versions/2016-10-31.md#awsserverlessfunction
     Properties:
-      ImageUri: 741448954840.dkr.ecr.us-west-2.amazonaws.com/docker-lambda-documentai:latest
-      PackageType: Image
+      # ImageUri: 741448954840.dkr.ecr.us-west-2.amazonaws.com/docker-lambda-documentai:latest
+      # PackageType: Image
       # CodeUri: helloWorld/
       # Handler: app.lambda_handler
       # Runtime: python3.10
@@ -28,37 +28,6 @@ Resources:
           Properties:
             Path: /hello
             Method: get
-  # PipelineExecutionRole:
-  #   Type: AWS::IAM::Role
-  #   Properties:
-  #     RoleName: aws-sam-cli-managed-dev-pipel-PipelineExecutionRole-LOvrqWqhhcZc
-  #     AssumeRolePolicyDocument:
-  #       Version: '2012-10-17'
-  #       Statement:
-  #         - Effect: Allow
-  #           Principal:
-  #             Service: 
-  #               - lambda.amazonaws.com
-  #               - ecs-tasks.amazonaws.com
-  #               - ec2.amazonaws.com
-  #               - codebuild.amazonaws.com
-  #               - codepipeline.amazonaws.com
-  #               - github-actions@github.com
-  #           Action: sts:AssumeRole
-  #     Policies:
-  #       - PolicyName: ECRPermissions
-  #         PolicyDocument:
-  #           Version: '2012-10-17'
-  #           Statement:
-  #             - Effect: Allow
-  #               Action:
-  #                 - ecr:InitiateLayerUpload
-  #                 - ecr:UploadLayerPart
-  #                 - ecr:CompleteLayerUpload
-  #                 - ecr:BatchCheckLayerAvailability
-  #                 - ecr:PutImage
-  #               Resource: arn:aws:ecr:us-west-2:741448954840:repository/docker-lambda-py
-
 Outputs:
   # ServerlessRestApi is an implicit API created out of Events key under Serverless::Function
   # Find out more about other implicit resources you can reference within SAM
