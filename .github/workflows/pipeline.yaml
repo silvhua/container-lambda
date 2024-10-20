@@ -116,7 +116,7 @@ jobs:
           python -m pip install --upgrade pip setuptools
       - name: Build resources
         run: |
-          sam build --use-container
+          sam build --use-container --cached
 
       - name: Assume the testing pipeline user role
         uses: aws-actions/configure-aws-credentials@v4
