@@ -2,10 +2,10 @@
 FROM public.ecr.aws/lambda/python:3.12
 
 # Copy requirements.txt
-COPY requirements.txt ${LAMBDA_TASK_ROOT}
+COPY ./helloWorld/requirements.txt ${LAMBDA_TASK_ROOT}
 
 # Install the specified packages
-RUN pip install -r helloWorld/requirements.txt --target "${LAMBDA_TASK_ROOT}"
+RUN pip install -r ./helloWorld/requirements.txt --target "${LAMBDA_TASK_ROOT}"
 
 # Copy function code
 COPY ./helloWorld/app.py ${LAMBDA_TASK_ROOT}
