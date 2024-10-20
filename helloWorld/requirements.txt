@@ -1,5 +1,4 @@
 requests
-wheel
 numexpr==2.8.4
 google-cloud-documentai==2.33.0
 google-cloud-documentai-toolbox==0.14.0-a0
